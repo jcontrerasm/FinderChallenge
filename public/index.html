@@ -4,30 +4,44 @@
     <title>Finder challenge</title>
     <meta charset="utf-8">
     <meta viewport="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/awesomplete.css">
     <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet" type="text/css">
-    <link href="/vendor/pure/pure-min.css" rel="stylesheet">
     <link href="/styles/index.css" rel="stylesheet">
   </head>
   <body>
-    <div class="app pure-g">
-      <header class="pure-u-1">
-        <div class="pure-u-1-3">
-          <h1 class="logo">Finder challenge!</h1>
-        </div>
-        <div class="pure-u-7-24">
+    <div class="app">
+      <header><a class="container-logo" href="./">
+          <h1 class="logo">Finder challenge</h1></a>
+        <div class="container-search">
           <div class="search-form">
-            <h1>search form</h1>
+            <form action="" method="">
+              <input class="awesomplete" type="search" id="text-search" onKeyUp="btnValidate()" list="mylist" data-minchars="3">
+              <input type="submit" value="Buscar" id="btn-submit" disabled>
+              <datalist id="mylist">
+                <option>Devil At The Catacombs</option>
+                <option>Angels Without A Mouth</option>
+                <option>Fish Looking At Me</option>
+                <option>Foreigners And Hunters</option>
+                <option>Zombies And Horses</option>
+                <option>Temptation Hiding From Me</option>
+              </datalist>
+            </form><a href="">Guardar búsqueda</a>
           </div>
         </div>
-        <div class="pure-u-1-3"></div>
       </header>
-      <aside class="filters pure-u-1-4"></aside>
-      <content class="pure-u-3-4"></content>
-      <footer class="pure-u-1"></footer>
+      <aside class="filters">
+        <div class="search-saved">
+          <h2>Búsquedas guardadas</h2>
+          <ul id="listSearchSaved"></ul>
+        </div>
+      </aside>
+      <content></content>
+      <footer></footer>
     </div>
     <script src="/vendor/underscore/underscore-min.js"></script>
     <script src="/scripts/global.js"></script>
     <script src="/scripts/search-form.js"></script>
+    <script src="/scripts/awesomplete.min.js" async></script>
     <script src="/scripts/app.js"></script>
   </body>
 </html>

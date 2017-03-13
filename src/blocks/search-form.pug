@@ -1,2 +1,13 @@
 .search-form
-    h1 search form
+    form(action="" , method="")
+      input(type="search" id="text-search" , onKeyUp="btnValidate()" class="awesomplete" list="mylist" data-minchars="3")
+      input(type="submit" , value="Buscar" id="btn-submit" disabled)
+      datalist(id="mylist")
+        option Devil At The Catacombs
+        option Angels Without A Mouth
+        option Fish Looking At Me
+        option Foreigners And Hunters
+        option Zombies And Horses
+        option Temptation Hiding From Me
+
+    a(href="") Guardar búsqueda

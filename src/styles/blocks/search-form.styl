@@ -1,9 +1,23 @@
 .search-form
-    margin-top 30px
+    flex( row , center , center)
+    flex-wrap wrap
 
-/*
-    for responsive
-*/
-.search-form
-    +below(650px)
-        display none
+    @media(max-width 568px)
+      flex( column , center , center)
+
+    form
+      input[type=search]
+        width 250px
+        height 2rem
+
+        @media(max-width 568px)
+          width 180px
+
+      input[type=submit]
+          width 60px
+          height 2rem
+          font-size 1rem
+
+    a
+      margin .5rem .5rem .5rem 1rem
+      color blue
